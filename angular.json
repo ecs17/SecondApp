@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "SecondApp": {
+    "casantstoreapp": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/SecondApp",
+            "outputPath": "dist/casantstoreapp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,14 +24,9 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/popper.js/dist/umd/popper.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -68,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "SecondApp:build"
+            "browserTarget": "casantstoreapp:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "SecondApp:build:production"
+              "browserTarget": "casantstoreapp:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "SecondApp:build"
+            "browserTarget": "casantstoreapp:build"
           }
         },
         "test": {
@@ -116,15 +111,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "SecondApp:serve"
+            "devServerTarget": "casantstoreapp:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "SecondApp:serve:production"
+              "devServerTarget": "casantstoreapp:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "SecondApp"
+  "defaultProject": "casantstoreapp"
 }
